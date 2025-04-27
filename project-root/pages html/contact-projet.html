@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا - Notre Plateforme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7ff;
+    }
+
+    .barre-haut {
+      background: #f5f7ff;
+      border-bottom: 2px solid #4a6bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-plateforme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-plateforme img {
+      height: 35px;
+    }
+
+    .nom-plateforme {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #4a6bff;
+    }
+
+    .contact-form {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 3rem auto;
+    }
+
+    .contact-form h3 {
+      text-align: center;
+      color: #4a6bff;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #4a6bff;
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #4a6bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .submit-btn:hover {
+      background-color: #3a56d4;
+    }
+	
+	.barre-haut {
+      background: #f5f7ff;
+      border-bottom: 2px solid #4a6bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-plateforme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-plateforme img {
+      height: 35px;
+    }
+
+    .nom-plateforme {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #4a6bff;
+    }
+
+    .liens-navigation {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .lien {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .lien:hover {
+      color: #4a6bff;
+    }
+
+    .boutons-compte {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-connexion {
+      background: transparent;
+      color: #4a6bff;
+      border: 2px solid #4a6bff;
+    }
+
+    .btn-connexion:hover {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription:hover {
+      background: #3a56d4;
+    }
+
+    .btn-mobile {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #4a6bff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .liens-navigation {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      .liens-navigation.active {
+        display: flex;
+      }
+
+      .btn-mobile {
+        display: block;
+      }
+    }
+	
+  </style>
+</head>
+<body>
+
+  <header class="barre-haut">
+    <div class="logo-plateforme" onclick="window.location.href='/'">
+      <img src="https://via.placeholder.com/40" alt="شعار" />
+      <span class="nom-plateforme">منصتنا</span>
+    </div>
+
+    <button class="btn-mobile" id="btn-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="liens-navigation" id="menu-navigation">
+      <a href="home-projet.html" class="lien">الرئيسية</a>
+      <a href="about_projet.html" class="lien">عن المنصة</a>
+      <a href="fuature-projet.html" class="lien">الخدمات</a>
+      <a href="contact-projet.html" class="lien">تواصل معنا</a>
+    </nav>
+
+    <div class="boutons-compte">
+      <button class="btn btn-connexion" onclick="location.href='login_projet.html'">تسجيل الدخول</button>
+      <button class="btn btn-inscription" onclick="location.href='signup-projet.html'">إنشاء حساب</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="contact-form">
+      <h3>أرسل لنا رسالة</h3>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">الموضوع</label>
+          <input type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">الرسالة</label>
+          <textarea id="message" name="message" class="form-control" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>	
+	
+	

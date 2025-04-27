@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصتنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .barre-haut {
+      background: #f5f7ff;
+      border-bottom: 2px solid #4a6bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-plateforme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-plateforme img {
+      height: 35px;
+    }
+
+    .nom-plateforme {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #4a6bff;
+    }
+
+    .liens-navigation {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .lien {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .lien:hover {
+      color: #4a6bff;
+    }
+
+    .boutons-compte {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-connexion {
+      background: transparent;
+      color: #4a6bff;
+      border: 2px solid #4a6bff;
+    }
+
+    .btn-connexion:hover {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription:hover {
+      background: #3a56d4;
+    }
+
+    .btn-mobile {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #4a6bff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .liens-navigation {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      .liens-navigation.active {
+        display: flex;
+      }
+
+      .btn-mobile {
+        display: block;
+      }
+    }
+	
+	.section-accueil {
+      background-image: url('https://images.unsplash.com/photo-1606761568499-6e9ef166e4f4');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .section-accueil::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .contenu {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contenu h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contenu p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .boutons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-principal {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn-secondaire {
+      background-color: white;
+      color: #3498db;
+      border: 2px solid #3498db;
+	 }
+
+
+  </style>
+</head>
+<body>
+
+  <header class="barre-haut">
+    <div class="logo-plateforme" onclick="window.location.href='/'">
+      <img src="https://via.placeholder.com/40" alt="شعار" />
+      <span class="nom-plateforme">منصتنا</span>
+    </div>
+
+    <button class="btn-mobile" id="btn-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="liens-navigation" id="menu-navigation">
+      <a href="home-projet.html" class="lien">الرئيسية</a>
+      <a href="about_projet.html" class="lien">عن المنصة</a>
+      <a href="fuature-projet.html" class="lien">الخدمات</a>
+      <a href="contact-projet.html" class="lien">تواصل معنا</a>
+    </nav>
+
+    <div class="boutons-compte">
+      <button class="btn btn-connexion" onclick="location.href='login_projet.html'">تسجيل الدخول</button>
+      <button class="btn btn-inscription" onclick="location.href='signup-projet.html'">إنشاء حساب</button>
+    </div>
+  </header>
+   <section class="section-accueil">
+    <div class="contenu">
+      <h1>مرحباً بك في منصتنا!</h1>
+      <p>قم بإدارة فريقك بسهولة وفعالية. انضم الآن!</p>
+      <div class="boutons">
+        <a href="login_projet.html" class="btn-principal">سجّل الآن</a>
+        <a href="about_projet.html" class="btn-secondaire">تعرّف أكثر</a>
+      </div>
+    </div>
+  </section>
+
+ 
+
+</body>
+</html>

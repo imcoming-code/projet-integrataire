@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصتنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7ff;
+    }
+
+    .barre-haut {
+      background: #f5f7ff;
+      border-bottom: 2px solid #4a6bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-plateforme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-plateforme img {
+      height: 35px;
+    }
+
+    .nom-plateforme {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #4a6bff;
+    }
+
+    .liens-navigation {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .lien {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .lien:hover {
+      color: #4a6bff;
+    }
+
+    .boutons-compte {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-connexion {
+      background: transparent;
+      color: #4a6bff;
+      border: 2px solid #4a6bff;
+    }
+
+    .btn-connexion:hover {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription:hover {
+      background: #3a56d4;
+    }
+	
+	.upcoming-events {
+    padding: 80px 0;
+    background-color: #f5f7fa;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background-color: #ffffff; /* أبيض نقي */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.event-details {
+    padding: 25px;
+    background-color: #f9f9f9; /* خلفية خفيفة */
+}
+
+.event-date {
+    color: #2563eb; /* أزرق أنيق */
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #111827; /* رمادي غامق */
+}
+
+.event-location {
+    color: #6b7280; /* رمادي متوسط */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-description {
+    margin-bottom: 20px;
+    color: #374151; /* رمادي داكن للقراءة */
+}
+
+.event-link {
+    display: inline-block;
+    background-color: #2563eb; /* أزرق ملكي */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.event-link:hover {
+    background-color: #1e40af; /* أزرق داكن للتفاعل */
+}
+
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+.feature {
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #eef2ff; /* أزرق فاتح جدًا */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #1e3a8a; /* أزرق غامق */
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #3b82f6; /* أزرق متوسط */
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.feature-img {
+  max-width: 60%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+ </style>
+</head>
+<body>
+
+  <header class="barre-haut">
+    <div class="logo-plateforme" onclick="window.location.href='/'">
+      <img src="https://via.placeholder.com/40" alt="شعار" />
+      <span class="nom-plateforme">منصتنا</span>
+    </div>
+
+    <button class="btn-mobile" id="btn-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="liens-navigation" id="menu-navigation">
+      <a href="home-projet.html" class="lien">الرئيسية</a>
+      <a href="about_projet.html" class="lien">عن المنصة</a>
+      <a href="fuature-projet.html" class="lien">الخدمات</a>
+      <a href="contact-projet.html" class="lien">تواصل معنا</a>
+    </nav>
+
+    <div class="boutons-compte">
+      <button class="btn btn-connexion" onclick="location.href='login_projet.html'">تسجيل الدخول</button>
+      <button class="btn btn-inscription" onclick="location.href='signup-projet.html'">إنشاء حساب</button>
+    </div>
+  </header>
+   
+   <section class="features">
+  <div class="feature">
+    <h3>👥 إدارة الأعضاء</h3>
+    <img src="https://illustrations.popsy.co/gray/shaking-hands.svg" alt="إدارة الأعضاء" class="feature-img">
+    <p>أضف وعدّل وتابع الطلاب في كل نادٍ بسهولة واحترافية.</p>
+  </div>
+
+  <div class="feature">
+    <h3>🕓 سجل النشاطات</h3>
+    <img src="https://illustrations.popsy.co/gray/keynote-presentation.svg" alt="سجل النشاطات" class="feature-img">
+    <p>تتبع المشاركات، الأدوار، والفعاليات لكل عضو على مر الزمن.</p>
+  </div>
+
+  <div class="feature">
+    <h3>📊 إحصاءات دقيقة</h3>
+    <img src="https://illustrations.popsy.co/gray/business-analysis.svg" alt="إحصاءات دقيقة" class="feature-img">
+    <p>رؤية فورية لعدد الأعضاء، الأنشطة، والمسؤولين داخل كل نادٍ.</p>
+  </div>
+</section>
+
+</body>
+</html>

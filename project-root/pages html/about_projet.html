@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>من نحن</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+	   body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.hero-section {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1517638851339-4aa32003c11b') no-repeat center center/cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+		margin-top: 20px;
+
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #fddbb2;
+}
+
+.overlay p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+details {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    float: left;
+}
+
+details[open] {
+    background-color: #f2f2f2;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+}
+
+  .barre-haut {
+      background: #f5f7ff;
+      border-bottom: 2px solid #4a6bff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-plateforme {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-plateforme img {
+      height: 35px;
+    }
+
+    .nom-plateforme {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #4a6bff;
+    }
+
+    .liens-navigation {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .lien {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .lien:hover {
+      color: #4a6bff;
+    }
+
+    .boutons-compte {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-connexion {
+      background: transparent;
+      color: #4a6bff;
+      border: 2px solid #4a6bff;
+    }
+
+    .btn-connexion:hover {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription {
+      background: #4a6bff;
+      color: white;
+    }
+
+    .btn-inscription:hover {
+      background: #3a56d4;
+    }
+	
+	.accordion-section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+	margin-top: 100px;
+}
+
+.accordion {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-side img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+	</style>
+</head>
+<body>
+    <header class="barre-haut">
+    <div class="logo-plateforme" onclick="window.location.href='/'">
+      <img src="https://via.placeholder.com/40" alt="شعار" />
+      <span class="nom-plateforme">منصتنا</span>
+    </div>
+
+    <button class="btn-mobile" id="btn-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="liens-navigation" id="menu-navigation">
+      <a href="home-projet.html" class="lien">الرئيسية</a>
+      <a href="about_projet.html" class="lien">عن المنصة</a>
+      <a href="fuature-projet.html" class="lien">الخدمات</a>
+      <a href="contact-projet.html" class="lien">تواصل معنا</a>
+    </nav>
+
+    <div class="boutons-compte">
+      <button class="btn btn-connexion" onclick="location.href='login_projet.html'">تسجيل الدخول</button>
+      <button class="btn btn-inscription" onclick="location.href='signup-projet.html'">إنشاء حساب</button>
+    </div>
+  </header>
+    <section class="hero-section">
+        <div class="overlay">
+            <h1>من نحن</h1>
+            <p>منصة رقمية تساعد المدراء والمؤسسات على إدارة فرقهم ونواديهم بسهولة واحترافية</p>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+	  <div class="content-container">
+	    <div class="accordion">
+        <details>
+            <summary>رؤيتنا</summary>
+            <p>أن نكون المنصة الأولى لإدارة الفرق والنشاطات في العالم العربي</p>
+        </details>
+
+        <details>
+            <summary>رسالتنا</summary>
+            <p>أدوات رقمية ذكية، واجهات بسيطة، دعم متواصل، وتحليلات متقدمة لتطوير الأداء</p>
+        </details>
+
+        <details>
+            <summary>قيمنا</summary>
+            <p>تمكين الفرق والمؤسسات من التنظيم الفعّال وتحقيق أهدافهم بكفاءة واحتراف</p>
+        </details>
+		
+		
+        <details>
+            <summary>الفئة المستهدفة</summary>
+            <p>المؤسسات، النوادي، الجمعيات، والمدراء الباحثون عن تنظيم فعّال وإدارة ذكية لفرقهم</p>
+        </details>
+		</div>
+		<div class="image-side">
+            <img src="https://hbrarabic.com/wp-content/uploads/2023/12/%D9%87%D8%A7%D8%B1%D9%81%D8%A7%D8%B1%D8%AF-%D8%A8%D8%B2%D9%86%D8%B3-%D8%B1%D9%8A%D9%81%D9%8A%D9%88-%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A7%D9%84%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A%D8%A9-1200x675.jpg">
+        </div>
+   </div>
+    </section>
+	
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="واتساب">
+    </a>
+</body>
+</html>
